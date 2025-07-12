@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300');
+body {
+  display: flex; justify-content: center; align-items: center;
+  height: 100vh; background: #1e1e2f; font-family: 'Roboto', sans-serif; color: #fff;
+}
+form {
+  background: #2a2d3a; padding: 40px; border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  display: flex; flex-direction: column; gap: 20px;
+}
+h1 { text-align: center; margin-bottom: 10px; }
+input[type="text"] {
+  width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #555;
+}
+.color-picker { display: flex; flex-wrap: wrap; gap: 10px; }
+.color-picker input { display: none; }
+.color-picker label {
+  cursor: pointer; display: inline-block; padding: 5px;
+}
+.color-picker span {
+  display: block; width: 30px; height: 30px; border-radius: 50%;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.4), 0 0 2px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.color-picker input:checked + label span {
+  transform: scale(1.3);
+  box-shadow: 0 0 8px rgba(255,255,255,0.8);
+}
+/* Color circles */
+.red{background:#db2828;} .orange{background:#f2711c;}
+.yellow{background:#fbbd08;} .olive{background:#b5cc18;}
+.green{background:#21ba45;} .teal{background:#00b5ad;}
+.blue{background:#2185d0;} .violet{background:#6435c9;}
+.purple{background:#a333c8;} .pink{background:#e03997;}
+button[type="submit"] {
+  background: linear-gradient(90deg,#00c9ff,#92fe9d);
+  border:none;border-radius:8px;padding:12px;font-weight:bold;
+  cursor:pointer;transition:transform 0.2s;
+}
+button[type="submit"]:hover { transform:scale(1.05); }
